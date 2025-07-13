@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run FastAPI dev server",
+      "type": "shell",
+      "command": "uvicorn main:app --reload",
+      "args": [],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Create DB tables",
+      "type": "shell",
+      "command": "python -c \"from models.database import create_db_and_tables; create_db_and_tables()\"",
+      "args": [],
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
