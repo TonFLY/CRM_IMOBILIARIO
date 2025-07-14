@@ -92,8 +92,8 @@ vmp_crm/                          ← Pasta principal (a casa)
 #### 1️⃣ **Baixar o código**
 ```bash
 # Abra o terminal e digite:
-git clone https://github.com/TonFLY/CRM_IMOBILIARIO.git
-cd CRM_IMOBILIARIO
+git clone https://github.com/seu-usuario/vmp_crm.git
+cd vmp_crm
 ```
 
 #### 2️⃣ **Configurar o Backend (Cérebro)**
