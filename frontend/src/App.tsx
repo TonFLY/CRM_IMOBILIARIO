@@ -9,6 +9,7 @@ import { PropertyDetailsPage } from './pages/PropertyDetailsPage';
 import { ClientsPage } from './pages/ClientsPage';
 import { ClientFormPage } from './pages/ClientFormPage';
 import { ClientDetailsPage } from './pages/ClientDetailsPage';
+import { VisitsPage } from './pages/VisitsPage';
 
 // Componente para proteger rotas autenticadas
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -99,6 +100,16 @@ function AppContent() {
         element={
           <ProtectedRoute>
             <ClientFormPage />
+          </ProtectedRoute>
+        } 
+      />
+      
+      {/* Rotas de Visitas */}
+      <Route 
+        path="/visits" 
+        element={
+          <ProtectedRoute>
+            <VisitsPage />
           </ProtectedRoute>
         } 
       />

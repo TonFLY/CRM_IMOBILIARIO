@@ -1639,3 +1639,433 @@ body {
     flex-direction: column;
   }
 }
+
+/* ============================================
+   📅 ESTILOS PARA SISTEMA DE VISITAS
+   ============================================ */
+
+/* Container principal de visitas */
+.visits-content {
+  margin-top: 2rem;
+}
+
+/* Navegação de visualizações */
+.view-navigation {
+  margin: 2rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.view-tabs {
+  display: flex;
+  gap: 0;
+}
+
+.view-tab {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: #718096;
+  transition: all 0.2s ease;
+}
+
+.view-tab:hover {
+  color: #3182ce;
+  background-color: #f7fafc;
+}
+
+.view-tab--active {
+  color: #3182ce;
+  border-bottom-color: #3182ce;
+  background-color: #ebf8ff;
+}
+
+/* Cards de visita */
+.visits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.visit-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.visit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Card especial para visitas de hoje */
+.visit-card--today {
+  border-left: 4px solid #3182ce;
+  background: linear-gradient(135deg, #ebf8ff 0%, #ffffff 100%);
+}
+
+.visit-card--today::before {
+  content: "HOJE";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #3182ce;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Card para visitas passadas */
+.visit-card--past {
+  opacity: 0.8;
+  background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+}
+
+/* Header do card de visita */
+.visit-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.visit-card__datetime {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.visit-datetime {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.visit-duration {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.visit-card__status {
+  display: flex;
+  align-items: center;
+}
+
+.status-badge {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Conteúdo do card */
+.visit-card__content {
+  margin-bottom: 1.5rem;
+}
+
+.visit-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.client-info, .property-info {
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.client-name, .property-type {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.client-phone, .property-location {
+  margin: 0;
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.visit-notes, .agent-notes {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fffaf0;
+  border-left: 4px solid #dd6b20;
+  border-radius: 4px;
+}
+
+.visit-notes p, .agent-notes p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #744210;
+}
+
+/* Ações do card */
+.visit-card__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.status-actions {
+  flex: 1;
+}
+
+.status-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  font-size: 0.875rem;
+  color: #2d3748;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Estatísticas de visitas */
+.statistics-container {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.statistics-container h2 {
+  margin: 0 0 1.5rem 0;
+  color: #2d3748;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  border-top: 4px solid #e2e8f0;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card--primary {
+  border-top-color: #3182ce;
+  background: linear-gradient(135deg, #ebf8ff 0%, #f7fafc 100%);
+}
+
+.stat-card--success {
+  border-top-color: #38a169;
+  background: linear-gradient(135deg, #f0fff4 0%, #f7fafc 100%);
+}
+
+.stat-card--danger {
+  border-top-color: #e53e3e;
+  background: linear-gradient(135deg, #fed7d7 0%, #f7fafc 100%);
+}
+
+.stat-card--warning {
+  border-top-color: #dd6b20;
+  background: linear-gradient(135deg, #fffaf0 0%, #f7fafc 100%);
+}
+
+.stat-card--info {
+  border-top-color: #805ad5;
+  background: linear-gradient(135deg, #faf5ff 0%, #f7fafc 100%);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* Filtros de visitas */
+.filters-container {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.filters-container h3 {
+  margin: 0 0 1rem 0;
+  color: #2d3748;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  font-size: 0.875rem;
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* Estados vazios */
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 12px;
+  border: 2px dashed #e2e8f0;
+  margin: 2rem 0;
+}
+
+.empty-state p {
+  margin: 0 0 1rem 0;
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+/* Coming soon */
+.coming-soon {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.coming-soon p {
+  margin: 0.5rem 0;
+  color: #718096;
+}
+
+/* Loading states */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #3182ce;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsividade para visitas */
+@media (max-width: 768px) {
+  .visits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .visit-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .visit-card__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .card-actions {
+    justify-content: space-between;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .view-tabs {
+    flex-direction: column;
+  }
+  
+  .view-tab {
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: none;
+  }
+  
+  .view-tab--active {
+    border-bottom: 1px solid #3182ce;
+    border-right: none;
+  }
+}

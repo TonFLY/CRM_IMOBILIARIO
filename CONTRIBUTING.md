@@ -71,8 +71,8 @@ Outras formas de resolver o mesmo problema.
 1. **Fork o repositório**
 2. **Clone localmente:**
    ```bash
-   git clone https://github.com/seu-usuario/vmp_crm.git
-   cd vmp_crm
+   git clone https://github.com/TonFLY/CRM_IMOBILIARIO.git
+   cd CRM_IMOBILIARIO
    ```
 
 3. **Configure o backend:**

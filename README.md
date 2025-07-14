@@ -92,8 +92,8 @@ vmp_crm/                          ← Pasta principal (a casa)
 #### 1️⃣ **Baixar o código**
 ```bash
 # Abra o terminal e digite:
-git clone https://github.com/seu-usuario/vmp_crm.git
-cd vmp_crm
+git clone https://github.com/TonFLY/CRM_IMOBILIARIO.git
+cd CRM_IMOBILIARIO
 ```
 
 #### 2️⃣ **Configurar o Backend (Cérebro)**
@@ -602,6 +602,7 @@ logging.error("Erro ao criar cliente!")
 - [API Documentation](http://localhost:8000/docs) - Swagger UI
 - [Component Library](docs/components.md) - Guia de componentes
 - [Database Schema](docs/database.md) - Estrutura do banco
+- [GitHub Repository](https://github.com/TonFLY/CRM_IMOBILIARIO) - Código fonte
 
 ---
 

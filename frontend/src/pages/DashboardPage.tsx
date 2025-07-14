@@ -69,8 +69,12 @@ export const DashboardPage = () => {
         <div className="menu-card" style={{ borderLeft: '4px solid #805ad5' }}>
           <h3>📅 Agenda de Visitas</h3>
           <p>Agende e acompanhe visitas aos imóveis</p>
-          <button className="btn" style={{ backgroundColor: '#805ad5', color: 'white' }}>
-            Ver Agenda
+          <button 
+            className="btn" 
+            style={{ backgroundColor: '#805ad5', color: 'white' }}
+            onClick={() => navigate('/visits')}
+          >
+            Gerenciar Visitas
           </button>
         </div>
 
